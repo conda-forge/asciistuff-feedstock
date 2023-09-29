@@ -1,5 +1,5 @@
 {% set name = "asciistuff" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/asciistuff-{{ version }}.tar.gz
-  sha256: 3739235fec0b262ddc5c7c30c46d24fd6b97efdb1e5d175193e6e2a9a4cfae14
+  sha256: 1ea328da280888c721e4ed4e96001720bb3e2520864d6cc3a98cd4fbe7e03233
 
 build:
   noarch: python
