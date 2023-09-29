@@ -1,11 +1,11 @@
-About asciistuff
-================
+About asciistuff-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciistuff-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dhondta/python-asciistuff
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciistuff-feedstock/blob/main/LICENSE.txt)
 
 Summary: Library for producing ASCII arts from a text or an image
 
