@@ -20,14 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
-    - setuptools
+    - python >=3.8,<4.0
+    - setuptools >=61.0
+    - setuptools-scm
   run:
     - colorama
-    - cowpy
-    - pillow
+    - cowpy >=1.1.2
+    - pillow >=10.2.0
     - pyfiglet
-    - python >=3.6
+    - python >=3.8,<4.0
     - termcolor
     - terminaltables
 
