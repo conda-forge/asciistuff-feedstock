@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/asciistuff-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/asciistuff-{{ version }}.tar.gz
   sha256: 7c220d156da4977e80eec324fc21a8ecba8d8681f59d415909e05506befacf1d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - asciistuff = asciistuff:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm
   run:
@@ -28,7 +28,7 @@ requirements:
     - cowpy >=1.1.2
     - pillow >=10.2.0
     - pyfiglet
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - termcolor
     - terminaltables
 
@@ -40,6 +40,7 @@ test:
     - asciistuff --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/dhondta/python-asciistuff
