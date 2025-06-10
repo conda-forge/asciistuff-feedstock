@@ -25,12 +25,10 @@ requirements:
     - setuptools-scm
   run:
     - colorama
-    - cowpy >=1.1.2
-    - pillow >=10.2.0
-    - pyfiglet
+    - cowpy >=1.1.5
+    - pillow >=11.2.0
+    - pyfiglet >=1.0.3
     - python >={{ python_min }},<4.0
-    - termcolor
-    - terminaltables
 
 test:
   imports:
