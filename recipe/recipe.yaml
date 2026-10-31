@@ -18,13 +18,13 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-      - asciistuff = asciistuff:main
+      - asciistuff = asciistuff.__main__:main
 
 requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=70.0
+    - setuptools >=80.0.0
     - setuptools-scm
   run:
     - colorama
@@ -38,7 +38,9 @@ tests:
       imports:
         - asciistuff
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
