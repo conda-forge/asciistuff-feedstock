@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: asciistuff
-  version: 1.3.3
+  version: "1.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/asciistuff-${{ version }}.tar.gz
-  sha256: d4d1408512fa792bd50c3e7064bc39c29895a4678b8013d705b526d6b85cf07e
+  sha256: 58960f35736b2b0db484de90f1a9b8f8ced23926269e048b505a7b503aede370
 
 build:
   number: 0
@@ -18,13 +18,13 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-      - asciistuff = asciistuff:main
+      - asciistuff = asciistuff.__main__:main
 
 requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=70.0
+    - setuptools >=80.0.0
     - setuptools-scm
   run:
     - colorama
@@ -38,7 +38,9 @@ tests:
       imports:
         - asciistuff
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - python ${{ python_min }}.*
